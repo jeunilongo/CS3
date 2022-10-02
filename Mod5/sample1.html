@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Module 5.1</title>
+    <style>
+      /*Set the background color of body to blue*/
+      body {
+        background-color: pink;
+      }
+      
+      /*Set the font color of h1, h2 and p to white*/
+      h1, h2, p{
+        color:white;
+      }
+      
+      /*Set the background color of h1 and div to gray*/
+      .grayBG {
+        background-color:gray;
+      }
+      
+      /*Set the text color of p with id='blue' to blue*/
+      p#blue {
+        color:blue;
+      }
+      
+      /*Set the text color of p with class='yellow' to yellow*/
+      p.yellow {
+        color:yellow;
+      }
+      
+      /*Set the text color of p that is a direct child of body to red*/
+      body > p {
+        color:red;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <h1 class='grayBG'>Basic Syntax</h1>
+    
+    <h2>Module 5.1</h2>
+    
+    <div class='grayBG'>
+      
+      <p>This paragraph is inside a div element</p>
+      <p id='blue'>This paragraph is inside a div element but has an id='blue'</p>
+      <p class='yellow'>This paragraph is inside a div element but with class='yellow'</p>
+    
+    </div>
+    
+    <p>This paragraph a direct child of body</p>
+    
+  </body>
+</html>
