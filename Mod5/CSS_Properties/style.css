@@ -1,0 +1,86 @@
+* {
+	box-sizing:border-box;
+}
+
+body {
+	background-color:gray;
+	background-image: url("images/bg.jfif");
+	background-repeat:no-repeat;
+	background-size: 100%;
+	margin:0;
+	padding-top:77.6px;
+}
+
+.logo {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+span {
+	font-size: 25px;
+	color: white;
+}
+
+#header {
+	background-color: blue;
+	padding: 10px;
+	position:fixed;
+	top:0;
+	width:100%;
+}
+
+#nav ul li a {
+	text-decoration:none;
+	padding: 10px;
+	color: white;
+	font-size: 20px;
+}
+
+#nav ul {
+	list-style-type:none;
+}
+
+#nav ul li {
+	float:left;
+}
+
+#nav {
+	position:sticky;
+	top:77.6px;
+	display:flex;
+	justify-content:center;
+	background-color: black;
+}
+
+#content {
+	clear:both;
+}
+
+#content-text {
+	float: left;
+	width:70%;
+}
+
+#content-nav {
+	float: right;
+	width: 30%;
+}
+
+#footer {
+	clear:both;
+}
+
+#footer p {
+	text-align: center;
+}
+
+h1 {
+	text-align:center;
+}
+
+#content-text p {
+	padding: 10px 30px;
+	text-indent: 30px;
+	text-align:justify;
+}
