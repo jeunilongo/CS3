@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Compatibility Test
+    </title>
+  <body>
+    <h1> Welcome to Compatibility Test </h1>
+    <button onclick="testFunction()">Check Compatibility</button>
+    <p id="demo" style="color:red; font-size: 20px"></p>
+    
+    <script>
+      function testFunction() {
+        var x = prompt("Insert Name 1: ", "");
+        var y = prompt("Insert Name 2: ", "");
+        var compatible = (Math.random() * 100).toFixed(2);
+        document.getElementById("demo").innerHTML = x + " and " + y + " are " + compatible + "% compatible.";
+      }
+    </script>
+  </body>
+</html>
