@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Who's your bias? </h1>
+		<button onclick="test()">Click This</button>
+		
+		<div style="padding:10px"><img id="demo" src="" width="50%"></div>
+		<script>
+			var x = ["jhope", "jimin", "jin", "jungkook", "rm", "suga", "v"];
+			function test() {
+				var c = Math.floor(Math.random() * 7);
+				document.getElementById("demo").src = "bts/" + x[c] + ".jpg";
+			}
+		</script>
+	</body>
+</html>
