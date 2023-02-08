@@ -12,12 +12,16 @@
 		<h1> Who's your bias? </h1>
 		<button onclick="test()">Click This</button>
 		
-		<div style="padding:10px"><img id="demo" src="" width="100%"></div>
+		<div style="padding:10px">
+			<p id="demo1" style="color:red"></p>
+			<img id="demo" src="" width="100%">
+		</div>
 		<script>
 			var x = ["jhope", "jimin", "jin", "jungkook", "rm", "suga", "v"];
 			function test() {
 				var c = Math.floor(Math.random() * 7);
 				document.getElementById("demo").src = "bts/" + x[c] + ".jpg";
+				document.getElementById("demo1".src = x[c].toUpperCase() + " will recognize you soon.";
 			}
 		</script>
 	</body>
