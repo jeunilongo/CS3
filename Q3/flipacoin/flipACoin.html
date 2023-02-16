@@ -98,6 +98,18 @@
 						document.getElementById("playerScore").innerHTML = pScore;
 					}
 				}
+				if((pscore == 5) || (cscore == 5)){
+					if(pscore == 5){
+						alert(name + " wins the game.");
+					} else {
+						alert("Computer wins the game.");
+					}
+					
+					pscore = 0;
+					cscore = 0;
+					document.getElementById("computerScore").innerHTML = cscore;
+					document.getElementById("playerScore").innerHTML = pscore;
+				}
 			}
 		</script>
 	</body>
