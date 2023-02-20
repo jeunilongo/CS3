@@ -4,6 +4,8 @@ This is a revised version of the Flip-A-Coin Game.
 The score has been updated as it shows when the player/computer gets 5 points.
 It also provides option for the user to restart the game or not.
 
+You may access the revised game through this [link](https://jeunilongo.github.io/CS3/Q3/flipacoin_revised/flipACoin.html)
+
 
 ## Added the following code:
 ```
