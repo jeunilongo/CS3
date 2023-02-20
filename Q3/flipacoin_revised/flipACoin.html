@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			h1 {
+				text-align:center;
+			}
+			
+			#coin {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				border-radius:50px;
+				margin:auto;
+			}
+			
+			#player {
+				background-color: red;
+				width:50%;
+				float:left;
+				text-align:center;
+				color: white;
+			}
+			
+			#computer {
+				background-color: blue;
+				width:50%;
+				float:left;
+				text-align:center;
+				color: white;
+			}
+			
+			#scoring {
+				margin-top: 50px;
+			}
+			
+			#scoring p {
+				font-size: 100px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			#button {
+				text-align: center;
+				margin-top: 20px;
+			}
+			
+			#random {
+				padding-top:35px;
+				text-align: center;
+				font-size: 30px;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1> FLIP-A-COIN </h1>
+		<div id="coin"><p id="random"></p> </div>
+		<div id="button">
+			<button onclick="flip()">FLIP A COIN</button>
+		</div>
+		<div id="scoring">
+			<div id="player">
+				<h2 id="playerName"></h2>
+				<p id="playerScore">0</p>
+			</div>
+			<div id="computer">
+				<h2>COMPUTER</h2>
+				<p id="computerScore">0</p>
+			</div>
+		</div>
+		
+		<p id="sc"></p>
+		<p id="play"></p>
+		<p id="check"></p>
+		
+		<script>
+			var name = prompt("Enter Name: ", "");
+			document.getElementById("playerName").innerHTML = name.toUpperCase();
+			var pscore = 0;
+			var cscore = 0;
+			var play = true;
+			
+			function flip() {
+				if(((pscore >= 5) || (cscore >= 5)) && !play){
+					if(pscore == 5){
+						alert(name + " wins the game.");
+					} else {
+						alert("Computer wins the game.");
+					}
+					
+					var decide = confirm("Do you want to play again?");
+					if(decide){
+						pscore = 0;
+						cscore = 0;
+						document.getElementById("computerScore").innerHTML = cscore;
+						document.getElementById("playerScore").innerHTML = pscore;
+						play = true;
+					} else {
+					
+					}
+				} else{
+					var random = (Math.random() * 2).toFixed(0);
+					var choice = confirm("HEAD or TAIL: Click 'OK' for HEAD or 'Cancel' for TAIL");
+					
+					if(random == 0){ // random HEAD
+						document.getElementById("random").innerHTML = "HEAD";
+						if(choice) { //player's choice is head
+							pscore++;
+							document.getElementById("playerScore").innerHTML = pscore;
+						} else {
+							cscore++;
+							document.getElementById("computerScore").innerHTML = cscore;
+						}
+					} else { // random TAIL
+						document.getElementById("random").innerHTML = "TAIL";
+						if(choice) { //player's choice is head
+							cscore++;
+							document.getElementById("computerScore").innerHTML = cscore;
+						} else {
+							pscore++;
+							document.getElementById("playerScore").innerHTML = pscore;
+						}
+					}
+				}
+				
+				if((pscore == 5) || (cscore == 5)){
+					play = false;
+				}	
+			}
+		</script>
+	</body>
+</html>
