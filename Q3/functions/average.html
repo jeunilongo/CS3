@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1 id="div1"></h1>
+		<h1 id="div2"></h1>
+		<script>
+			function average(a, b) {
+				var ave = (a + b)/2;
+				document.getElementById("div1").innerHTML = ave;
+			}
+			
+			function checkInterval(a, b, c) {
+				if(a < b) {
+					if((c>=a) && (c<=b)){
+						alert("TRUE");
+						document.getElementById("div2").innerHTML = "TRUE";
+					} else {
+						alert("FALSE");
+						document.getElementById("div2").innerHTML = "FALSE";
+					}
+				} else {
+					if((c <= a) && (c >= b)){
+						alert("TRUE");
+						document.getElementById("div2").innerHTML = "TRUE";
+					} else {
+						alert("FALSE");
+						document.getElementById("div2").innerHTML = "FALSE";
+					}
+				}
+			}
+			
+			function inputNumber() {
+				var w = parseInt(prompt("Enter a number"));
+				return w;	
+			}
+			
+			var x = inputNumber();
+			var y = inputNumber();
+			average(x, y);
+			x = inputNumber();
+			y = inputNumber();
+			var z = inputNumber();
+			checkInterval(x, y, z);
+		</script>
+	
+	</body>
+</head>
